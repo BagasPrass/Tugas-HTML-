@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+     <head>
+	      <title> Multimedia - HTML 5</title>
+	</head>
+	<body>
+	    <h2> Belajar Multimedia - HTML 5 </h2>
+		<p>
+		<button onclick="playVid()" type="button">Mulai videonya bos video</button>
+		<button onclick="pauseVid()" type="button">Pause videonya bos  video</button>
+		<button onclick="durationVid()" type="button">Durasi ni boss video</button>
+		<p>
+		<iframe width="520" height="315" src="https://www.youtube.com/embed/UZjFWO_2LUc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<video width ="420" id="myVideo">
+		    <source src= "media/movie.mp4" type= "video/mp4">
+			Browser not support...
+		</video>
+    </body>
+    <script>
+	var vid = document.getElementById("myVideo");
+	
+	function durationVid() {
+	    alert(vid.duration)
+	}
+		
+	function playVid() {
+        vid.play();
+        vid.loop = true;
+	}		
+	
+	function pauseVid() {
+	    vid.pause();
+	}
+    </script>
+</html>	
+				
